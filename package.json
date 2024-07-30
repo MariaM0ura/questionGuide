@@ -1,0 +1,16 @@
+{
+  "name": "questionguide",
+  "version": "1.0.0",
+  "description": "Yahoo Answers style Q&A platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maria Moura",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
