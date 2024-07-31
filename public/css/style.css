@@ -1,3 +1,11 @@
-h1{
-    color: red;
+body{
+    background-color: #eceff1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #343a40;
+}
+
+#question_form{
+    margin-top: 5vh;
+
 }

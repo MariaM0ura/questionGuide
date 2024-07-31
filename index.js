@@ -9,11 +9,17 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/
 
 
 app.get('/', (req, res) => {
-
-    
     res.render('index');
 });
 
+app.get('/question', (req, res) => {
+    res.render('question');
+});
+
+app.post('/savequestion', (req, res) => {
+    res.send('formulario recebudo');
+});
+
 app.listen(8080, () => {
-    console.log('Server is running on port 3000');
+    console.log('Server is running on port 8080');
 });
