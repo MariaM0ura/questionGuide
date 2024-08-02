@@ -2,25 +2,18 @@
 
 <body>
     <%- include('partials/navbar') %>
-    <div class="container" id="question_form">
-        <div class="card">
-            <div class="card-header">
-                <h3 class="p-4 mt-2">Ask Question</h3>
-            </div>
-            <div class="card-body">
-            <form method="post" action="/savequestion">
-                <label>Title</label>
-                <input type="text" class="form-control" placeholder="Enter title" name="title">
-                <label>Description</label>
-                <textarea class="form-control" placeholder="Enter description" name="description"></textarea>
-                <div class="d-flex justify-content-end"> 
-                    <button class="btn btn-success mt-4 ">Submit</button>
-                </div>
-            </form>                
-            <div>
-        </div>
 
-    </div> 
+    <div class="container mt-4">
+        <h1><%= question.title %></h1>
+        <hr>
+        <p><%= question.description %></p>
+        <form method="post" action="/answer">
+          <label><h3>Answer</h3></label>
+          <textarea class="form-control mb-3" placeholder="Enter your answer" name="body"></textarea>
+          <input type="hidden" name="question_id" value="<%= question.id %>">
+          <button type="submit" class="btn btn-success">Answer</button>
+        </form>
+      </div>
 </body>
 
 <%- include('partials/footer') %>
