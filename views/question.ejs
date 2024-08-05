@@ -13,6 +13,16 @@
           <input type="hidden" name="question_id" value="<%= question.id %>">
           <button type="submit" class="btn btn-success">Answer</button>
         </form>
+
+        <h3>Answers</h3>
+
+        <% answers.forEach(answer => { %>
+          <div class="card mb-2">
+            <div class="card-body">
+              <p><%= answer.body %></p>
+            </div>
+          </div>
+        <% }) %>
       </div>
 </body>
 
